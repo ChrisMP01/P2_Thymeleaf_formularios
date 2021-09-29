@@ -1,0 +1,28 @@
+<html>
+	<body>
+		<form th:action="@{/registro}" method="post">
+			<fieldset title="datos personales">
+				<p>Nombre:<input type="text" name="nombre" size="40"></p>
+				<p>Primer apellido:<input type="text" name="apellido" size="40"></p>
+				<p>Segundo apellido:<input type="text" name="apellido2" size="40"></p>
+				<p>E-mail:<input type="text" name="mail" size="50"></p>
+				<p>Fecha de nacimiento
+					<select name="day" placeholder="dia">
+						<option th:each="i:${#numbers.sequence(1,31)}"th:value="${i}"th:text="'dia '+${i}"></option>
+					</select>
+					<select name="month" placeholder="mes">
+						<option th:each="i:${#numbers.sequence(1,12)}"th:value="${i}"th:text="'mes '+${i}"></option>
+					</select>
+					<select name="year" placeholder="año">
+						<option th:each="i:${#numbers.sequence(1990,2021)}"th:value="${i}"th:text="'año '+${i}"></option>
+					</select>
+				</p>
+				<!--<p>Contraseña:<input type="password"></p>
+				<p>Sexo</p>
+				<p><input></p>
+				<p><input></p>
+				<p>Dirección</p>-->
+			</fieldset>
+		</form>
+	</body>
+</html>
