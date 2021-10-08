@@ -1,0 +1,32 @@
+<html lang="es">
+	<head>
+	</head>
+	
+	<body>
+		<h3>Datos registro</h3>
+		<p th:text=${nombre_form}></p>
+		<p th:text=${apellido_form}></p>
+		<p th:text=${apellido2_form}></p>
+		<p th:text=${mail_form}></p>
+		<tr name="fecha_nac">
+			<td>Día:</td>
+			<td th:text=${day_form}/>
+			<td>Mes:</td>
+			<td th:text=${month_form}/>
+			<td>Año:</td>
+			<td th:text=${year_form}/>
+		</tr>
+		<p th:text=${hm_form}></p>
+		<p th:text=${password_form}></p>
+		<p th:text=${direccion_form}></p>
+		<h3>Nivel de estudios e intereses</h3>
+		<p>-Nivel de estudios:</p>
+		<p th:text=${estudios_form}></p>
+		<p>-Recibir artículos sobre los siguientes temas:</p>
+		<p th:text=${musica_form}></p>
+		<p th:text=${deportes_form}></p>
+		<p th:text=${cine_form}></p>
+		<p th:text=${libros_form}></p>
+		<p th:text=${ciencia_form}></p>
+	</body>
+</html>

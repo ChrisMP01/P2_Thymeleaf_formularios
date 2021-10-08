@@ -1,0 +1,20 @@
+<html>
+	<head>
+		<!--Implementación de css en formulario.-->
+		<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}"/>
+	</head>
+	<body>
+		<form th:action="@{/peso}" method="post">
+			<fieldset>
+				<legend>Datos de peso:</legend>
+				<p>Edad:<input type="text" name="edad" size="2"></p>
+				<p>peso:<input type="text" name="peso" size="5"></p>
+				<p>Estatura:<input type="text" name="altura" size="2"></p>
+				<p>Sexo
+					<input type="radio" name="hm" value="h">Hombre
+					<input type="radio" name="hm" value="m">Mujer</p>
+				<p><input type="submit" value="Enviar"></p>
+			</fieldset>
+		</form>
+	</body>
+</html>

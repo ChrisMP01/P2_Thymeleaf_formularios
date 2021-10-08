@@ -1,7 +1,10 @@
 <html>
 	<body>
 		<form th:action="@{/registro}" method="post">
-			<fieldset title="datos personales">
+		
+		<!--Fieldset Datos personales-->
+			<fieldset>
+				<legend>datos personales</legend>
 				<p>Nombre:<input type="text" name="nombre" size="40"></p>
 				<p>Primer apellido:<input type="text" name="apellido" size="40"></p>
 				<p>Segundo apellido:<input type="text" name="apellido2" size="40"></p>
@@ -17,11 +20,36 @@
 						<option th:each="i:${#numbers.sequence(1990,2021)}"th:value="${i}"th:text="'año '+${i}"></option>
 					</select>
 				</p>
-				<!--<p>Contraseña:<input type="password"></p>
-				<p>Sexo</p>
-				<p><input></p>
-				<p><input></p>
-				<p>Dirección</p>-->
+				<p>Contraseña:<input type="password" name="password"></p>
+				<p>Sexo
+					<input type="radio" name="hm" value="h">Hombre
+					<input type="radio" name="hm" value="m">Mujer</p>
+				<p>Dirección<input type="text" name="direccion" size="50" placeholder="Calle o plaza, número y piso."></p>
+			</fieldset>
+			
+			<!--Fieldset Nivel de estudios e intereses-->
+			<fieldset>
+				<legend>Nivel de estudios e intereses</legend>
+				<p>Nivel de estudios</p>
+				<p><input type="radio" name="estudios" value="ce">Certificado escolar</p>
+				<p><input type="radio" name="estudios" value="eso">Graduado en E.S.O.</p>
+				<p><input type="radio" name="estudios" value="bach/fp">Bachiller - Formación Profesional</p>
+				<p><input type="radio" name="estudios" value="diplomado">Diplomado</p>
+				<p><input type="radio" name="estudios" value="lic/doc">Licenciado o Doctorado</p>
+				
+				<p>Recibir artículos sobre los siguientes temas:</p>
+				<p><input type="checkbox" name="musica" value="musica">Música</p>
+				<p><input type="checkbox" name="deportes" value="deportes">Deportes</p>
+				<p><input type="checkbox" name="cine" value="cine">Cine</p>
+				<p><input type="checkbox" name="libros" value="libros">Libros</p>
+				<p><input type="checkbox" name="ciencia" value="ciencia">Ciencia</p>
+			</fieldset>
+			
+			<!--Fieldset Enviar-->
+			<fieldset>
+				<legend>Enviar formulario</legend>
+				<p>¿Estás seguro de que los datos son correctos?</p>
+				<p><input type="submit" value="Enviar"></p>
 			</fieldset>
 		</form>
 	</body>
